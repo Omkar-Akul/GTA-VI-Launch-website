@@ -124,11 +124,18 @@ function App() {
             </div>
           </div>
           <div className=" w-full h-screen flex items-center justify-center bg-black ">
-            <div className="cntnr w-full h-9/12"></div>
-            <div className="limg relative w-1/2 h-full -order-1">
-              <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-28" src="../imag.png" alt="" />
+            <div className="cntnr  flex text-white w-full h-9/12">
+            <div className="limg relative w-1/2 h-full ">
+              <img className=" scale-100 ml-28 relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 " src="../imag.png" alt="" />
             </div>
-             <div className="rimg"></div>
+             <div className="rimg">
+              <h1 className="text-white text-7xl">still running </h1>
+              <h1 className="text-white text-7xl">not hunting </h1>
+              <p className="mt-10"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti maxime, animi 
+                cupiditate nesciunt libero,ratione, doloribus eligendi pariatur accusantium porro ipsa magnam iusto?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate tempora voluptatibus voluptatem esse?</p>
+              </div>
+             </div>
           </div>
         </div>
       )}
