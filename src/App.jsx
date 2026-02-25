@@ -32,8 +32,21 @@ function App() {
   });
 
   useGSAP(()=>{
-    const main = document.querySelector(".main")
-  })
+    const main = document.querySelector(".main");
+
+    main?.addEventListener("mousemove",function(e){
+      const xMove = (e.clientX / window.innerWidth - .5) * 40;
+      gsap.to(".imagesdiv .text ",{
+        x:`${xMove*.4}%`,
+      });
+      gsap.to(".sky ",{
+        x:xMove,
+      });
+      gsap.to(".bg ",{
+        x:xMove*1.7,
+      });
+    });
+  }, [showContent]);
 
 
   return (
@@ -89,15 +102,15 @@ function App() {
               <h1>theft</h1>
               <h1>auto</h1>
             </div>
-            <div className="imagesdiv relative w-full h-screen ">
-                <img className=" absolute top-0 l-0 w-full h-full object-cover" src="../sky.png" alt="" />
-              <img className=" absolute top-0 l-0 w-full h-full object-cover" src="../bg.png" alt="" />
+            <div className="imagesdiv relative overflow-hidden w-full h-screen ">
+                <img className=" sky scale-105 absolute top-0 l-0 w-full h-full object-cover" src="../sky.png" alt="" />
+              <img className=" bg scale-105 absolute top-0 l-0 w-full h-full object-cover" src="../bg.png" alt="" />
                  <div className="text text-white absolute top-10 left-1/2 flex flex-col gap-1 -translate-x-1/4">
               <h1 className="text-8xl -ml-30">grand</h1>
               <h1 className="text-8xl ml-20">theft</h1>
               <h1 className="text-8xl -ml-30">auto</h1>
             </div>
-              <img className=" absolute top-8 -left-0.5 translate-x-1/2 scale-80" src="../girlbg.png" alt="" />
+              <img className=" character absolute top-8 -left-0.5 translate-x-1/2 scale-80" src="../girlbg.png" alt="" />
               
             </div>
             <div className="btmbar text-white absolute bottom-0 left-0 w-full py-12 px-10 bg-linear-to-t from-black to-transparent ">
@@ -109,6 +122,13 @@ function App() {
               </div>
               <img className="absolute h-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4" src="../ps5.png" alt="" />
             </div>
+          </div>
+          <div className=" w-full h-screen flex items-center justify-center bg-black ">
+            <div className="cntnr w-full h-9/12"></div>
+            <div className="limg relative w-1/2 h-full -order-1">
+              <img className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ml-28" src="../imag.png" alt="" />
+            </div>
+             <div className="rimg"></div>
           </div>
         </div>
       )}
