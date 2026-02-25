@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from 'react'
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
+import "remixicon/fonts/remixicon.css";
 
 function App() {
   let [showContent,setShowContent] = useState(false);
@@ -29,6 +30,10 @@ function App() {
       },
     });
   });
+
+  useGSAP(()=>{
+    const main = document.querySelector(".main")
+  })
 
 
   return (
@@ -79,11 +84,30 @@ function App() {
                 </h3>
               </div>
             </div>
-
+            <div className="text absolute">
+              <h1>grand</h1>
+              <h1>theft</h1>
+              <h1>auto</h1>
+            </div>
             <div className="imagesdiv relative w-full h-screen ">
                 <img className=" absolute top-0 l-0 w-full h-full object-cover" src="../sky.png" alt="" />
               <img className=" absolute top-0 l-0 w-full h-full object-cover" src="../bg.png" alt="" />
-              <img className=" absolute top-8 -left-0.5 translate-x-1/2 scale-85" src="../girlbg.png" alt="" />
+                 <div className="text text-white absolute top-10 left-1/2 flex flex-col gap-1 -translate-x-1/4">
+              <h1 className="text-8xl -ml-30">grand</h1>
+              <h1 className="text-8xl ml-20">theft</h1>
+              <h1 className="text-8xl -ml-30">auto</h1>
+            </div>
+              <img className=" absolute top-8 -left-0.5 translate-x-1/2 scale-80" src="../girlbg.png" alt="" />
+              
+            </div>
+            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-12 px-10 bg-linear-to-t from-black to-transparent ">
+              <div className="flex gap-1 items-center absolute bottom-4">
+                <i className="text-3xl ri-arrow-down-line"></i>
+                <h3 className="text-l font-[Helvetica_Now_Display]">
+                  Scroll Down
+                </h3>
+              </div>
+              <img className="absolute h-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4" src="../ps5.png" alt="" />
             </div>
           </div>
         </div>
