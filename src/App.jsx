@@ -37,14 +37,14 @@ function App() {
       scale: 1,
       rotate: 0,
       duration: 2.4,
-      delay: -1.3,
+      delay: -1,
       ease: "Expo.easeInOut",
     });
     gsap.to(".sky", {
       scale: 1.1,
       rotate: 0,
       duration: 2,
-      delay: -.8,
+      delay: -1,
       ease: "Expo.easeInOut",
     });
 
@@ -52,7 +52,7 @@ function App() {
       scale: 1.1,
       rotate: 0,
       duration: 2,
-      delay: -.8,
+      delay: -1,
       ease: "Expo.easeInOut",
     });
 
@@ -62,7 +62,7 @@ function App() {
       bottom: "-63%",
       rotate: 0,
       duration: 2,
-      delay: -.8,
+      delay: -1,
       ease: "Expo.easeInOut",
     });
 
@@ -70,7 +70,7 @@ function App() {
       scale: 1,
       rotate: 0,
       duration: 2,
-      delay: "-.8",
+      delay: -1,
       ease: "Expo.easeInOut",
     });
 
@@ -149,7 +149,7 @@ function App() {
               <img className=" bg scale-200 -rotate-20 absolute top-0 l-0 w-full h-full object-cover" src="../bg.png" alt="" />
                  <div className="text scale-150 -rotate-12 text-white absolute top-10 left-1/2 flex flex-col gap-0.5 -translate-x-1/4">
               <h1 className="text-8xl -ml-40">grand</h1>
-              <h1 className="text-8xl ml-0">theft</h1>
+              <h1 className="text-8xl ml-0">thefft</h1>
               <h1 className="text-8xl -ml-40">auto</h1>
             </div>
               <img className="absolute character -bottom-[250%] left-1/2 -translate-x-1/2  scale-[3] -rotate-20" src="../girlbg.png" alt="" />
